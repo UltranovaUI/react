@@ -1,0 +1,30 @@
+{
+  "name": "@ultranova/react",
+  "version": "0.1.1",
+  "description": "A cool React component library.",
+  "repository": "https://github.com/UltranovaUI/react.git",
+  "author": "honk <contact@honk.email>",
+  "license": "MPL-3.0",
+  "packageManager": "yarn@3.5.0",
+  "type": "module",
+    "scripts": {
+    "rollup": "rollup -c"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.1.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-typescript": "^11.1.0",
+    "@types/react": "^18.0.35",
+    "react": "^18.2.0",
+    "rollup": "^3.20.2",
+    "rollup-plugin-dts": "^5.3.0",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.4"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts"
+}
