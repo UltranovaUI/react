@@ -7,7 +7,7 @@
   "license": "MPL-3.0",
   "packageManager": "yarn@3.5.0",
   "type": "module",
-    "scripts": {
+  "scripts": {
     "rollup": "rollup -c"
   },
   "devDependencies": {
