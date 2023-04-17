@@ -13,7 +13,10 @@ interface Props {
 }
 
 const Reveal: React.FC<Props> = ({ auto, width, duration, steps, color = "dark", offset = 1, children, responsive }) => {
-  const characters = (children as string).trim().length;
+  // const characters = (children as string).trim().length;
+  // quick and dirty fix for the f.trim is not a function error
+  // TODO: fix this properly
+  const characters = (children as string).length;
 
   let dynamicWidth = "auto";
   let dynamicDuration = characters / 12 + "s";
@@ -37,6 +40,7 @@ const Reveal: React.FC<Props> = ({ auto, width, duration, steps, color = "dark",
 
   const cursorColorValue = color === "light" ? "rgba(255, 255, 255, 0.75)" : color === "dark" ? "rgba(0, 0, 0, 0.75)" : color;
 
+  // TODO: don't use styled-components, maybe switch to goober?
   const reveal = keyframes`
     from {
       width: 0;
