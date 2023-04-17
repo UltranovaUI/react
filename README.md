@@ -3,7 +3,7 @@ A library of React components for building web applications.
 
 # Building
 First, you need to make sure all packages are installed: ```yarn install```<br />
-Then, we pack everything up with  ```yarn rollup```<br />
+Then, we pack everything up with  ```yarn parcel```<br />
 Once it's done, it should place the output in the dist directory.
 
 ****
