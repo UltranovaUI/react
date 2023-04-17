@@ -1,13 +1,14 @@
 {
   "name": "@ultranova/react",
-  "version": "0.2.0",
+  "version": "0.2.4",
   "description": "A cool React component library.",
   "repository": "https://github.com/UltranovaUI/react.git",
   "author": "honk <contact@honk.email>",
   "license": "MPL-3.0",
   "packageManager": "yarn@3.5.0",
   "scripts": {
-    "rollup": "rollup -c",
+    "parcel": "parcel build",
+    "watch": "parcel watch",
     "test": "jest",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
@@ -17,10 +18,8 @@
     "@babel/preset-env": "^7.21.4",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.21.4",
-    "@rollup/plugin-commonjs": "^24.1.0",
-    "@rollup/plugin-node-resolve": "^15.0.2",
-    "@rollup/plugin-terser": "^0.4.1",
-    "@rollup/plugin-typescript": "^11.1.0",
+    "@parcel/packager-ts": "2.8.3",
+    "@parcel/transformer-typescript-types": "2.8.3",
     "@storybook/addon-essentials": "7.0.5",
     "@storybook/addon-interactions": "7.0.5",
     "@storybook/addon-links": "7.0.5",
@@ -38,15 +37,14 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
+    "node-sass": "^8.0.0",
+    "parcel": "^2.8.3",
     "postcss": "^8.4.22",
+    "postcss-modules": "^4.3.0",
     "prop-types": "15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
-    "rollup": "^3.20.2",
-    "rollup-plugin-dts": "^5.3.0",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^4.0.2",
     "storybook": "7.0.5",
     "styled-components": "^5.3.9",
     "tailwindcss": "^3.3.1",
@@ -54,12 +52,19 @@
     "typescript": "^5.0.4"
   },
   "peerDependencies": {
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "styled-components": "^5.3.9"
   },
+  "source": "src/index.ts",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "targets": {
+    "main": {
+      "optimize": true
+    }
+  }
 }
