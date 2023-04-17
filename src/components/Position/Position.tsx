@@ -1,5 +1,4 @@
 import React, { ReactNode } from "react";
-import "./Position.css";
 
 interface PositionProps {
   top?: boolean;
@@ -13,17 +12,17 @@ interface PositionProps {
 const Position = ({ top, bottom, right, left, children, className }: PositionProps) => {
   if (top) {
     if (right) {
-      return <div className={`absolute top right ${className}`}>{children}</div>;
+      return <div className={`absolute top-[20px] right-[20px] ${className}`}>{children}</div>;
     } else if (left) {
-      return <div className={`absolute top left ${className}`}>{children}</div>;
+      return <div className={`absolute top-[20px] left-[20px] ${className}`}>{children}</div>;
     }
   }
 
   if (bottom) {
     if (right) {
-      return <div className={`absolute bottom right ${className}`}>{children}</div>;
+      return <div className={`absolute bottom-[20px] right-[20px] ${className}`}>{children}</div>;
     } else if (left) {
-      return <div className={`absolute bottom left ${className}`}>{children}</div>;
+      return <div className={`absolute bottom-[20px] left-[20px] ${className}`}>{children}</div>;
     }
   }
 
